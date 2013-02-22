@@ -10,6 +10,10 @@
 
 @interface RecipeBookViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+
+//this variable is added to reference the tableView
+//in the implementation file which passing data through the segue
+//to "RecipeDetailViewController.m"
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

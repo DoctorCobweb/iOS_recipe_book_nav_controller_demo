@@ -15,7 +15,7 @@
     NSArray *recipes;
 }
 
-@synthesize tableView;
+//@synthesize tableView;
 
 - (void)viewDidLoad
 {
@@ -47,10 +47,24 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    //check to see if the passed in segue variable is the one we're after
+    //namely, the segue between "RecipeViewController" and "RecipeDetailViewController".
     if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        //build a path to the selected row in our tableView by calling "tableView:indexPathForSelectedRow".
+        NSIndexPath *indexPath = [_tableView indexPathForSelectedRow];
+        
+        //assign a RecipeDetailViewController to the destination ViewController contained in
+        //the segue we're using.
+        //segue.destinationViewController returns the view controller whose contents should be displayed
+        //at the end of the segue.
         RecipeDetailViewController *destViewController =
         segue.destinationViewController;
+        
+        //now that we have the right destination ViewController assigned, call set the "recipeName" property
+        //using the automatically generated accessor method. The right side of the assignment is just using
+        //a message call to find the relevant string located at the "indexPath.row" which is the selected row
+        //in the tableView.
         destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
     }
 }

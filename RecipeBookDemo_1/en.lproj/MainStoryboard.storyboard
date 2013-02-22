@@ -4,12 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Recipe Book View Controller - Recipe Bookles-->
+        <!--Recipe Book View Controller - Recipe Book-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="RecipeBookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="XWd-Z5-Nrz">
@@ -44,7 +44,7 @@
                             <constraint firstItem="XWd-Z5-Nrz" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="rPG-4x-ij5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Bookles" id="mXE-b3-PAT"/>
+                    <navigationItem key="navigationItem" title="Recipe Book" id="mXE-b3-PAT"/>
                     <connections>
                         <outlet property="tableView" destination="XWd-Z5-Nrz" id="v3c-51-NMM"/>
                     </connections>
@@ -58,7 +58,7 @@
             <objects>
                 <viewController id="KIy-j3-dgd" customClass="RecipeDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rac-1I-cCw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Details page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvv-HZ-Pn4">
@@ -72,13 +72,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hvv-HZ-Pn4" firstAttribute="top" secondItem="Rac-1I-cCw" secondAttribute="top" constant="207" id="6Ce-8e-q24"/>
-                            <constraint firstItem="Hvv-HZ-Pn4" firstAttribute="leading" secondItem="Rac-1I-cCw" secondAttribute="leading" constant="38" id="8f3-To-JQi"/>
+                            <constraint firstAttribute="trailing" secondItem="Hvv-HZ-Pn4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BCI-n7-jqI"/>
+                            <constraint firstItem="Hvv-HZ-Pn4" firstAttribute="top" secondItem="Rac-1I-cCw" secondAttribute="top" constant="206" id="YK2-hT-VXW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pUp-Nf-wiW"/>
                     <connections>
-                        <outlet property="recipeLabel" destination="Hvv-HZ-Pn4" id="Nsi-Rp-5wQ"/>
+                        <outlet property="recipeLabel" destination="Hvv-HZ-Pn4" id="XFx-nr-Xrm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opP-xK-BXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,6 +90,7 @@
             <objects>
                 <navigationController id="yq5-oo-Kdc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iqo-Lt-jm0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
